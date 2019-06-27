@@ -17,7 +17,7 @@ function setColorPickerEventListeners(element, colors, pickerElements) {
 	let pickerLen = pickerElements.length;
 	for (let i = 0; i < pickerLen; i++) {
 		pickerElements[i].addEventListener('change', () => {
-			let red =colors.red.value;
+			let red = colors.red.value;
 			let green = colors.green.value;
 			let blue = colors.blue.value;
 			setElementBGColor(element, red, green, blue);
@@ -28,7 +28,7 @@ function setColorPickerEventListeners(element, colors, pickerElements) {
 
 function setElementBGColor(bgElement, red, green, blue) {
 	let rgbVal = [red, green, blue].join(',');
-	colorBox.style.backgroundColor = "rgb(" + rgbVal + ")";
+	bgElement.style.backgroundColor = "rgb(" + rgbVal + ")";
 }
 
 function setDisplayValues(red, green, blue) {
