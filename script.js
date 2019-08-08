@@ -1,7 +1,7 @@
 window.onload = function () {
 	initColorPicker();
 };
-
+// defining colors
 function initColorPicker() {
 	let colorBox = document.getElementById("color-box");
 	let rgb = {
@@ -13,6 +13,7 @@ function initColorPicker() {
 	setColorPickerEventListeners(colorBox, rgb, colorPickers);
 }
 
+//defining color picker
 function setColorPickerEventListeners(element, colors, pickerElements) {
 	let pickerLen = pickerElements.length;
 	for (let i = 0; i < pickerLen; i++) {
@@ -25,12 +26,13 @@ function setColorPickerEventListeners(element, colors, pickerElements) {
 		});
 	}
 }
-
+// event- changing the color
 function setElementBGColor(bgElement, red, green, blue) {
 	let rgbVal = [red, green, blue].join(',');
 	bgElement.style.backgroundColor = "rgb(" + rgbVal + ")";
 }
 
+//event- displaying changed values
 function setDisplayValues(red, green, blue) {
 	let redVal = document.getElementById("redVal");
 	let greenVal = document.getElementById("greenVal");
